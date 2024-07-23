@@ -1,6 +1,12 @@
 # Point Of Sale POS
 
 website untuk kasir dan managemnt barang
+"php": "^8.1",
+"barryvdh/laravel-dompdf": "^2.0",
+"guzzlehttp/guzzle": "^7.2",
+"laravel/framework": "^10.10",
+"laravel/sanctum": "^3.3",
+"laravel/tinker": "^2.8"
 
 ## Instalasi
 
@@ -13,7 +19,7 @@ Ikuti langkah-langkah berikut untuk menginstal wesbite POS:
 2. **Instal Dependensi**
 
    ```bash
-   composer install
+   composer install/ composer update
 3. **Salin File Konfigurasi**
 
    ```bash
