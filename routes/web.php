@@ -90,6 +90,7 @@ Route::get('/forgot/password', [AuthController::class, 'forgotPw']);
 // Admin routes
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function() {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
+    Route::get('/admin/requests/count', [RequestController::class, 'countPendingRequests']);
     
     Route::get('/admin/kategori', [KategoriController::class, 'index']);
     Route::post('/admin/kategori/store', [KategoriController::class, 'store']);
@@ -123,6 +124,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function() {
     Route::get('/admin/user/{id}', [UserController::class, 'destroy']);
     Route::get('/admin/profile/{id}', [ProfileController::class, 'edit']);
     Route::put('/admin/profile/{id}', [ProfileController::class, 'update']);
+
+    Route::post('requests/{request}/approve', [RequestController::class, 'approve'])->name('requests.approve')->middleware('ceklevel:admin');
+    Route::post('requests/{request}/not-approve', [RequestController::class, 'notApprove'])->name('requests.notApprove')->middleware('ceklevel:admin');
 });
 
 // Admin and Kasir routes
@@ -143,7 +147,5 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin,kasir']], function() {
     
     // Request routes
     Route::resource('requests', RequestController::class);
-    Route::post('requests/{request}/approve', [RequestController::class, 'approve'])->name('requests.approve')->middleware('ceklevel:admin');
-    Route::post('requests/{request}/not-approve', [RequestController::class, 'notApprove'])->name('requests.notApprove')->middleware('ceklevel:admin');
 });
 

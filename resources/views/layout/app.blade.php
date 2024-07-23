@@ -120,6 +120,7 @@
         window.open('/{{auth()->user()->level}}/laporan/{{ session('berhasil') }}/print', '_blank');
       }, 2000);
     </script>
+    <script src="{{ asset('js/notifications.js') }}"></script>
   @endif
   @stack('script')
 </body>

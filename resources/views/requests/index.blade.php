@@ -95,8 +95,8 @@
                     <table class="table table-hover" id="table-logs">
                         <thead>
                             <tr>
-                                <th>No.</th>
-                                <th>User</th>
+                                <th>Log ID</th>
+                                <th>Input By</th>
                                 <th>Request ID</th>
                                 <th>Log Type</th>
                                 <th>Description</th>

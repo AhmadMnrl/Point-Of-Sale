@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <title>Login Kasir</title>
     <link rel="icon" href="{{asset('assets/img/unsplash/logo.png')}}" type="image/x-icon">
 

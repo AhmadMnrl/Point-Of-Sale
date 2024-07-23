@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Barang;
 use App\Models\Transaksi;
 use App\Models\TransaksiDetail;
+use App\Models\Request as UserRequest;
 use Carbon\Carbon;
 
 class DashboardController extends Controller
@@ -27,7 +28,9 @@ class DashboardController extends Controller
             ->groupBy('bulan')
             ->orderBy('bulan', 'asc')
             ->get();
+
+            $pendingRequests = UserRequest::where('status', 'submitted')->count();
     
-        return view('dashboard.index', compact('barang', 'transaksi', 'detail', 'transaksi_hari_ini', 'transaksi_per_bulan', 'stok_kosong'));
+        return view('dashboard.index', compact('barang', 'transaksi', 'detail', 'transaksi_hari_ini', 'transaksi_per_bulan', 'stok_kosong','pendingRequests'));
     }    
 }
