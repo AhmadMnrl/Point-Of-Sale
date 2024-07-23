@@ -29,7 +29,7 @@ class DashboardController extends Controller
             ->orderBy('bulan', 'asc')
             ->get();
 
-            $pendingRequests = UserRequest::where('status', 'submitted')->count();
+        $pendingRequests = UserRequest::where('status', 'submitted')->count();
     
         return view('dashboard.index', compact('barang', 'transaksi', 'detail', 'transaksi_hari_ini', 'transaksi_per_bulan', 'stok_kosong','pendingRequests'));
     }    

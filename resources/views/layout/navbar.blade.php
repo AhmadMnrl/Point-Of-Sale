@@ -11,13 +11,13 @@
       <li class="nav-item dropdown">
           <a href="#" class="nav-link nav-link-lg" data-toggle="dropdown">
               <i class="fas fa-bell"></i>
-              @if($pendingRequests > 0)
+              @if(isset($pendingRequests) && $pendingRequests > 0)
               <span class="badge badge-warning">{{ $pendingRequests }}</span>
               @endif
           </a>
           <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-header">Notifications</div>
-              @if($pendingRequests > 0)
+              @if(isset($pendingRequests) && $pendingRequests > 0)
               <a href="/requests" class="dropdown-item has-icon">
                   <i class="fas fa-envelope"></i> {{ $pendingRequests }} New Requests
               </a>

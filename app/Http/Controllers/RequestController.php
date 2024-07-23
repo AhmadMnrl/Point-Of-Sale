@@ -12,15 +12,20 @@ class RequestController extends Controller
 {
     public function index()
     {
-        $requests = Auth::user()->level === 'admin' ? UserRequest::all() : Auth::user()->requests;
+        if (Auth::user()->level === 'admin') {
+            $requests = UserRequest::all();
+            $pendingRequests = UserRequest::where('status', 'submitted')->count();
+        } else {
+            $requests = Auth::user()->requests;
+            $pendingRequests = 0;
+        }
+        
         $activityLogs = Auth::user()->level === 'kasir' ? ActivityLog::with('user')->get() : collect();
         $barang = Barang::all();
     
-        // Define pending requests count for admin
-        $pendingRequests = Auth::user()->level === 'admin' ? UserRequest::where('status', 'submitted')->count() : 0;
-        
         return view('requests.index', compact('requests', 'activityLogs', 'barang', 'pendingRequests'));
-    }    
+    }
+      
 
     public function store(HttpRequest $request)
     {
