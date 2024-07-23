@@ -100,7 +100,7 @@
                                 <th>Request ID</th>
                                 <th>Log Type</th>
                                 <th>Description</th>
-                                <th>Created At</th>
+                                <th>Log Datetime</th>
                             </tr>
                         </thead>
                         <tbody>
