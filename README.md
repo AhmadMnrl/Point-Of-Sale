@@ -10,29 +10,29 @@ Ikuti langkah-langkah berikut untuk menginstal wesbite POS:
 
    ```bash
    git clone https://github.com/AhmadMnrl/Point-Of-Sale.git
-1. **Instal Dependensi**
+2. **Instal Dependensi**
 
    ```bash
    composer install
-1. **Salin File Konfigurasi**
+3. **Salin File Konfigurasi**
 
    ```bash
    cp .env.example .env
-1. **Generate Key Aplikasi**
+4. **Generate Key Aplikasi**
 
    ```bash
    php artisan key:generate
-1. **KJalankan Migrasi Database Serta Seeder**
+5. **Jalankan Migrasi Database Serta Seeder**
 
    ```bash
    php artisan migrate --seed
-1. **Jalankan Server**
+6. **Jalankan Server**
 
    ```bash
    php artisan serve
-1. **KAkses Aplikasi**
-
-Buka http://localhost:8000 di browser Anda.
+7. **Akses Aplikasi**
+   ```bash
+   Buka http://localhost:8000 di browser Anda.
 
 
 NOTE : sample user ada didalam file AllDataSeeder.php
