@@ -18,7 +18,7 @@ class AllDataSeeder extends Seeder
             'kode' => 'A-202407100001',
             'nama' => 'Admin',
             'email' => 'admin@gmail.com',
-            'password' => Hash::make('password123'), // Set a default password
+            'password' => Hash::make('password123'),
             'level' => 'admin',
         ]);
 
@@ -48,10 +48,10 @@ class AllDataSeeder extends Seeder
         Barang::create([
             'kode' => '20247100001',
             'nama' => 'Zinc',
-            'kategori_id' => 1, // Assuming 'Shampoo' has ID 1
+            'kategori_id' => 1,
             'harga_beli' => 10000.00,
             'harga_jual' => 12000.00,
-            'satuan_id' => 1, // Assuming 'Pcs' has ID 1
+            'satuan_id' => 1,
             'stok' => 100,
             'diskon' => 5.00,
         ]);
@@ -59,14 +59,12 @@ class AllDataSeeder extends Seeder
         Barang::create([
             'kode' => '20247100002',
             'nama' => 'Pantene Conditioner',
-            'kategori_id' => 2, // Assuming 'Conditioner' has ID 2
+            'kategori_id' => 2,
             'harga_beli' => 15000.00,
             'harga_jual' => 18000.00,
-            'satuan_id' => 2, // Assuming 'Bottle' has ID 2
+            'satuan_id' => 2,
             'stok' => 200,
             'diskon' => 10.00,
         ]);
-
-        // Add more barang entries if needed
     }
 }

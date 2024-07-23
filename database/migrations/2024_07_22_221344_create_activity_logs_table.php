@@ -11,13 +11,13 @@ class CreateActivityLogsTable extends Migration
         Schema::create('activity_logs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('request_id'); // Updated to string to match request_id type in requests table
+            $table->string('request_id');
             $table->string('log_type');
             $table->text('description');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('request_id')->references('request_id')->on('requests')->onDelete('cascade'); // Ensure this matches the column in requests table
+            $table->foreign('request_id')->references('request_id')->on('requests')->onDelete('cascade');
         });
     }
 
