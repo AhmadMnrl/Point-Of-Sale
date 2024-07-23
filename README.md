@@ -1,15 +1,15 @@
-# Nama Aplikasi Laravel
+# Point Of Sale POS
 
-Deskripsi singkat tentang aplikasi Anda.
+website untuk kasir dan managemnt barang
 
 ## Instalasi
 
-Ikuti langkah-langkah berikut untuk menginstal aplikasi Laravel:
+Ikuti langkah-langkah berikut untuk menginstal wesbite POS:
 
 1. **Kloning Repository**
 
    ```bash
-   git clone <my-cool-project>
+   git clone https://github.com/AhmadMnrl/Point-Of-Sale.git
 1. **Instal Dependensi**
 
    ```bash
@@ -31,10 +31,9 @@ Ikuti langkah-langkah berikut untuk menginstal aplikasi Laravel:
    ```bash
    php artisan serve
 1. **KAkses Aplikasi**
+
 Buka http://localhost:8000 di browser Anda.
 
-   ```bash
-   git clone <my-cool-project>
 
 NOTE : sample user ada didalam file AllDataSeeder.php
 
