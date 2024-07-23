@@ -66,5 +66,16 @@ class AllDataSeeder extends Seeder
             'stok' => 200,
             'diskon' => 10.00,
         ]);
+
+        Barang::create([
+            'kode' => '20247100003',
+            'nama' => 'Soap Elek',
+            'kategori_id' => 3,
+            'harga_beli' => 12000.00,
+            'harga_jual' => 14000.00,
+            'satuan_id' => 2,
+            'stok' => 0,
+            'diskon' => 11.00,
+        ]);
     }
 }
